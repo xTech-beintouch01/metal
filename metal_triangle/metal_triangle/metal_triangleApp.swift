@@ -11,7 +11,8 @@ import SwiftUI
 struct metal_triangleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // ContentView()
+            metal_triangle()
         }
     }
 }
