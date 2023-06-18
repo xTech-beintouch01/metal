@@ -19,8 +19,11 @@ struct VertexOut {
 };
 
 vertex VertexOut vertexShader(const device Vertex* vertexArray [[buffer(0)]], unsigned int vid [[vertex_id]]) {
+    // triangle vertices
     Vertex input = vertexArray[vid];
     VertexOut output;
+    // assign the input pos to output, to pass from the shader down to subsequent stages of the rendering pipeline
+    // float4 4d vector (x, y, z, w), set w = 1.0
     output.position = float4(input.position, 1.0);
     return output;
 }
